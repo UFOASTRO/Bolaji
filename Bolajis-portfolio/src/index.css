@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+::selection {
+  background-color: red; /* Color of the highlight when selected */
+  color: white; /* Color of the text when selected */
+}
+:root{
+    --default-yellow : #FFD52F;
+    --background-color : #FFFDF1;
+    --default-black: #191919;
+}
