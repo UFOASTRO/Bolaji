@@ -7,11 +7,11 @@ function HeroSection() {
   return (
     <section className="hero-section relative w-full overflow-hidden md:mb-30 ">
       <div className="container mx-auto flex flex-col md:block min-h-[80vh] md:min-h-screen relative">
-        
+
         {/* TEXT CONTENT */}
         {/* On Mobile: Order 1 (Top). On Desktop: Absolute positioned */}
         <div className="md:absolute md:top-12 md:left-20 flex flex-col md:gap-10 z-10 px-6 md:px-0 mt-8 md:mt-0">
-          
+
           {/* Top Text */}
           <div className="top-text md:right-5 relative flex items-center gap-36 md:w-[45vw] ">
             <p className="text-[14px] md:text-[16px] uppercase font-medium tracking-wide">
@@ -33,13 +33,13 @@ function HeroSection() {
         {/* IMAGE CONTENT */}
         {/* On Mobile: Order 2. Customized Border Radius. */}
         <div className="order-2 relative mt-6 md:mt-0 flex justify-center md:block">
-           {/* Desktop: Your original padding/layout. Mobile: Full width with custom rounded corners */}
-          <img 
-            src={Bolaji} 
-            alt="Bolaji" 
+          {/* Desktop: Your original padding/layout. Mobile: Full width with custom rounded corners */}
+          <img
+            src={Bolaji}
+            alt="Bolaji"
             className="w-full h-auto object-cover 
                        md:py-10 md:px-10 md:w-auto md:relative
-                       rounded-tr-[4rem] rounded-bl-[4rem] md:rounded-none" 
+                       rounded-tr-[4rem] rounded-bl-[4rem] md:rounded-none"
           />
         </div>
 

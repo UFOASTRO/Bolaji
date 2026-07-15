@@ -57,15 +57,13 @@ function AboutBolaji() {
             <div className="folders font-lexend font-light flex gap-2 text-white text-sm md:text-base relative top-2 z-10">
               <div
                 onClick={() => setActiveTab("student")}
-                className={`box1 cursor-pointer rounded-t-xl py-2 px-6 md:p-4 bg-[#191919] transition-opacity duration-300 ${
-                  activeTab === "student" ? "opacity-100" : "opacity-90"
-                }`}>
+                className={`box1 cursor-pointer rounded-t-xl py-2 px-6 md:p-4 bg-[#191919] transition-opacity duration-300 ${activeTab === "student" ? "opacity-100" : "opacity-90"
+                  }`}>
                 Student
               </div>
               <div
-                className={`box-2 cursor-pointer rounded-t-xl py-2 px-6 md:p-4 bg-[#191919] transition-opacity duration-300 ${
-                  activeTab === "microbiologist" ? "opacity-100" : "opacity-90"
-                }`}
+                className={`box-2 cursor-pointer rounded-t-xl py-2 px-6 md:p-4 bg-[#191919] transition-opacity duration-300 ${activeTab === "microbiologist" ? "opacity-100" : "opacity-90"
+                  }`}
                 onClick={() => setActiveTab("microbiologist")}>
                 Microbiologist
               </div>
