@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=Oswald:wght@200..700&display=swap');
 @import "tailwindcss";
 
 ::selection {
@@ -9,4 +10,9 @@
     --background-color : #FFFDF1;
     --default-black: #191919;
     --default-orange: #FFA52F;
+}
+
+@theme {
+  --font-oswald: Oswald, sans-serif;
+  --font-lexend: Lexend, sans-serif;
 }

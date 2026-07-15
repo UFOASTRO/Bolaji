@@ -5,7 +5,7 @@ function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative px-6 md:px-20 py-6 flex justify-between items-center z-50 font-light backdrop-blur-md md:bg-transparent">
+    <nav className="navbar relative px-6 md:px-20 py-6 flex justify-between items-center z-50 font-light backdrop-blur-md ">
       
       {/* Mobile: Hamburger Icon */}
       <div className="md:hidden z-50" onClick={() => setIsOpen(!isOpen)}>
@@ -17,25 +17,25 @@ function NavBar() {
       </div>
 
       {/* Desktop: Left Links */}
-      <div className="hidden md:flex gap-10 ">
-        <p className="cursor-pointer hover:font-normal">Home</p>
-        <p className="cursor-pointer hover:font-normal">About Me</p>
+      <div className="hidden md:flex gap-40 items-center">
+        <p className="cursor-pointer">Home</p>
+        <p className="cursor-pointer">About Me</p>
       </div>
 
       {/* Logo - Centered on desktop, right on mobile? Adjusted to flex center */}
-      <div className="center flex justify-start">
+      <div className="center flex justify-end">
         <p className="lexgend-bold text-2xl text-[#191919]">BỌLÁJÍ</p>
       </div>
 
       {/* Desktop: Right Links */}
-      <div className="hidden md:flex items-center gap-10">
-        <p className="cursor-pointer hover:font-normal">Newsletters</p>
+      <div className="hidden md:flex items-center gap-40 justify-end">
+        <p className="cursor-pointer">Newsletters</p>
         <p className="bg-[#FFD52F] py-3 px-6 rounded-sm cursor-pointer hover:bg-[#ffc800] transition">Contact</p>
       </div>
 
        {/* Mobile Menu Overlay (Optional Basic Implementation) */}
        {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-xl flex flex-col items-center py-10 gap-6 md:hidden">
+        <div className="absolute top-full left-0 w-full shadow-xl flex flex-col items-center py-10 gap-6 md:hidden">
           <p>Home</p>
           <p>About Me</p>
           <p>Newsletters</p>
