@@ -20,7 +20,7 @@ function Footer() {
           <button className="bg-[#FFD52F] text-black font-semibold text-sm py-2 px-6 rounded hover:bg-[#ffc800] transition w-fit mt-2">
             Subscribe to my newsletter
           </button>
-          <p className="text-xs text-gray-500 mt-8">© 2024 All rights reserved.</p>
+          <p className="text-xs text-gray-500 mt-8">© 2026 All rights reserved.</p>
         </div>
 
         {/* Middle Column: Newsletters */}
