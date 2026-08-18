@@ -8,7 +8,7 @@ function Footer() {
   useEffect(() => {
     const fetchFooterPosts = async () => {
       try {
-        const response = await fetch("/api/substack-posts-footer");
+        const response = await fetch("/api/substack-posts?limit=3");
         const data = await response.json();
         setFooterPosts(data);
       } catch (error) {

@@ -10,12 +10,12 @@ export default defineConfig({
       '/api/substack-posts': {
         target: 'https://whatwasntsaid.substack.com',
         changeOrigin: true,
-        rewrite: (path) => '/api/v1/posts'
+        rewrite: (path) => path.replace(/^\/api\/substack-posts/, '/api/v1/posts')
       },
       '/api/substack-profile': {
         target: 'https://substack.com',
         changeOrigin: true,
-        rewrite: (path) => '/api/v1/user/whatwasntsaid/public_profile'
+        rewrite: (path) => path.replace(/^\/api\/substack-profile/, '/api/v1/user/whatwasntsaid/public_profile')
       }
     }
   }

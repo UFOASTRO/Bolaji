@@ -12,7 +12,7 @@ function Newsletters() {
     const fetchData = async () => {
       try {
         const [postsRes, profileRes] = await Promise.all([
-          fetch("/api/substack-posts"),
+          fetch("/api/substack-posts?limit=5"),
           fetch("/api/substack-profile")
         ]);
         const postsData = await postsRes.json();
