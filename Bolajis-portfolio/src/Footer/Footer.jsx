@@ -8,7 +8,7 @@ function Footer() {
   useEffect(() => {
     const fetchFooterPosts = async () => {
       try {
-        const response = await fetch("https://corsproxy.io/?https://whatwasntsaid.substack.com/api/v1/posts?limit=3");
+        const response = await fetch("/api/substack-posts-footer");
         const data = await response.json();
         setFooterPosts(data);
       } catch (error) {

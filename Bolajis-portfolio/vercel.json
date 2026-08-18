@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/substack-posts",
+      "destination": "https://whatwasntsaid.substack.com/api/v1/posts"
+    },
+    {
+      "source": "/api/substack-profile",
+      "destination": "https://substack.com/api/v1/user/whatwasntsaid/public_profile"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

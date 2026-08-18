@@ -5,4 +5,18 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  server: {
+    proxy: {
+      '/api/substack-posts': {
+        target: 'https://whatwasntsaid.substack.com',
+        changeOrigin: true,
+        rewrite: (path) => '/api/v1/posts'
+      },
+      '/api/substack-profile': {
+        target: 'https://substack.com',
+        changeOrigin: true,
+        rewrite: (path) => '/api/v1/user/whatwasntsaid/public_profile'
+      }
+    }
+  }
 })
