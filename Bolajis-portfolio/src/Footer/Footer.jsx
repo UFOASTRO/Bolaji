@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, XLogo, WhatsappLogo, LinkedinLogo, Globe } from "@phosphor-icons/react";
 import FooterTextImg from "../assets/Icons/Footer-text.png";
 
 function Footer() {
+  const [footerPosts, setFooterPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchFooterPosts = async () => {
+      try {
+        const response = await fetch("https://corsproxy.io/?https://whatwasntsaid.substack.com/api/v1/posts?limit=3");
+        const data = await response.json();
+        setFooterPosts(data);
+      } catch (error) {
+        console.error("Error fetching footer posts:", error);
+      }
+    };
+    fetchFooterPosts();
+  }, []);
+
   return (
     <footer className="w-full bg-[#191919] text-white pt-16 overflow-hidden relative">
       <div className="container px-6 md:px-8 max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row justify-between gap-12 font-lexend">
@@ -17,18 +32,23 @@ function Footer() {
             <a href="#" className="hover:text-white transition"><LinkedinLogo size={24} /></a>
             <a href="#" className="hover:text-white transition"><Globe size={24} /></a>
           </div>
-          <button className="bg-[#FFD52F] text-black font-semibold text-sm py-2 px-6 rounded hover:bg-[#ffc800] transition w-fit mt-2">
+          <a href="https://whatwasntsaid.substack.com" target="_blank" rel="noopener noreferrer" className="bg-[#FFD52F] text-black font-semibold text-sm py-2 px-6 rounded hover:bg-[#ffc800] transition w-fit mt-2 block text-center">
             Subscribe to my newsletter
-          </button>
+          </a>
           <p className="text-xs text-gray-500 mt-8">© 2026 All rights reserved.</p>
         </div>
 
         {/* Middle Column: Newsletters */}
         <div className="flex flex-col gap-4 text-right md:w-1/3">
           <h3 className="text-sm font-semibold text-gray-400 mb-2">Newsletters</h3>
-          <a href="#" className="text-xs uppercase hover:text-[#FFD52F] transition">WHAT HASN'T SAID</a>
-          <a href="#" className="text-xs uppercase hover:text-[#FFD52F] transition">AN UNBROKEN THREAD</a>
-          <a href="#" className="text-xs uppercase hover:text-[#FFD52F] transition">HATERS OF LOVERS</a>
+          {footerPosts.map((post) => (
+            <a key={post.id} href={post.canonical_url} target="_blank" rel="noopener noreferrer" className="text-xs uppercase hover:text-[#FFD52F] transition truncate" title={post.title}>
+              {post.title}
+            </a>
+          ))}
+          {footerPosts.length === 0 && (
+             <span className="text-xs text-gray-600">Loading...</span>
+          )}
         </div>
 
         {/* Right Column: Certifications */}

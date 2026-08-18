@@ -2,7 +2,7 @@ import './App.css';
 import NavBar from '../components/Navbar';
 import HeroSection from './Hero/HeroSection';
 import AboutBolaji from './About/About';
-// import Newsletters from './Newsletters/Newsletters';
+import Newsletters from './Newsletters/Newsletters';
 import Projects from './Projects/Projects';
 // import Journey from './Journey/Journey';
 import Contact from './Contact/Contact';
@@ -16,7 +16,7 @@ function App() {
         <NavBar />
         <HeroSection />
         <AboutBolaji />
-        {/* <Newsletters /> */}
+        <Newsletters />
         <Projects />
         {/* <Journey /> */}
         <Contact />
