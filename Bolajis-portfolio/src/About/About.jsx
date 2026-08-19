@@ -30,6 +30,12 @@ function AboutBolaji() {
     </p>
   );
 
+  const writerText = (
+    <p>
+      My name is Folarin Bolaji Samuel. I am a motivated <strong>writer</strong> and editorial reviewer with experience in academic, creative, and technical writing. I am a published author with strong skills in critical analysis and structured communication, passionate about impactful storytelling and effective information dissemination within academic communities.
+    </p>
+  );
+
   return (
     <section id="about" className="w-full flex items-center justify-center">
       {" "}
@@ -54,25 +60,31 @@ function AboutBolaji() {
 
           <div className="bottom text-lexgend relative">
             {/* Tabs */}
-            <div className="folders font-lexend font-light flex gap-2 text-white text-sm md:text-base relative top-2 z-10">
+            <div className="folders font-lexend font-light flex gap-2 text-white text-sm md:text-base relative top-2 z-10 flex-wrap md:flex-nowrap">
               <div
                 onClick={() => setActiveTab("student")}
-                className={`box1 cursor-pointer rounded-t-xl py-2 px-6 md:p-4 bg-[#191919] transition-opacity duration-300 ${activeTab === "student" ? "opacity-100" : "opacity-90"
+                className={`box1 cursor-pointer rounded-t-xl py-2 px-4 md:px-6 md:p-4 bg-[#191919] transition-opacity duration-300 ${activeTab === "student" ? "opacity-100" : "opacity-90"
                   }`}>
                 Student
               </div>
               <div
-                className={`box-2 cursor-pointer rounded-t-xl py-2 px-6 md:p-4 bg-[#191919] transition-opacity duration-300 ${activeTab === "microbiologist" ? "opacity-100" : "opacity-90"
+                className={`box-2 cursor-pointer rounded-t-xl py-2 px-4 md:px-6 md:p-4 bg-[#191919] transition-opacity duration-300 ${activeTab === "microbiologist" ? "opacity-100" : "opacity-90"
                   }`}
                 onClick={() => setActiveTab("microbiologist")}>
                 Microbiologist
               </div>
+              <div
+                className={`box-3 cursor-pointer rounded-t-xl py-2 px-4 md:px-6 md:p-4 bg-[#191919] transition-opacity duration-300 ${activeTab === "writer" ? "opacity-100" : "opacity-90"
+                  }`}
+                onClick={() => setActiveTab("writer")}>
+                Writer & Reviewer
+              </div>
             </div>
 
             {/* Content Box */}
-            <div className="box-big bg-[#191919] text-white w-full md:w-[533.87px] py-10 px-4  md:px-4 md:py-6 rounded-lg rounded-tl-none font-lexend font-light text-sm md:text-[15px] md:font-light leading-7 shadow-2xl ">
+            <div className="box-big bg-[#191919] text-white w-full md:w-[533.87px] py-10 px-4  md:px-4 md:py-6 rounded-lg md:rounded-tl-none font-lexend font-light text-sm md:text-[15px] md:font-light leading-7 shadow-2xl ">
               <div key={activeTab} className="fade-in">
-                {activeTab === "student" ? studentText : microbiologistText}
+                {activeTab === "student" ? studentText : activeTab === "microbiologist" ? microbiologistText : writerText}
               </div>
               <a href={BolajisResume} download="Bolaji's CV">
                 <div className="download flex justify-end transition duration-900 ease-in-out">

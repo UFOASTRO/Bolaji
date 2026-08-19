@@ -2,32 +2,22 @@ import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { 
-  Dna, 
-  Flask, 
-  TestTube, 
-  Virus, 
-  Bug, 
-  Drop, 
-  Thermometer, 
-  Eyedropper, 
-  ChartLine, 
-  Target 
+  MagnifyingGlass, 
+  PenNib, 
+  BookOpenText, 
+  FileText, 
+  UsersThree 
 } from "@phosphor-icons/react";
 
 const skills = [
-  { name: "Polymerase Chain Reaction (PCR)", icon: Dna, color: "#FF6B6B" },
-  { name: "DNA Sequencing", icon: Target, color: "#4ECDC4" },
-  { name: "Cell Culture", icon: Flask, color: "#45B7D1" },
-  { name: "Flow Cytometry", icon: ChartLine, color: "#96CEB4" },
-  { name: "Bioinformatics", icon: Bug, color: "#FFEEAD" },
-  { name: "Fluorescence Microscopy", icon: Eyedropper, color: "#D4A5A5" },
-  { name: "ELISA", icon: TestTube, color: "#9B59B6" },
-  { name: "Aseptic Technique", icon: Drop, color: "#3498DB" },
-  { name: "Microbial Culturing", icon: Virus, color: "#E67E22" },
-  { name: "Spectrophotometry", icon: Thermometer, color: "#2ECC71" },
+  { name: "Research and critical analysis", icon: MagnifyingGlass, color: "#FF6B6B" },
+  { name: "Editing and Proofreading", icon: PenNib, color: "#4ECDC4" },
+  { name: "Creative and formal writing", icon: BookOpenText, color: "#45B7D1" },
+  { name: "Technical writing", icon: FileText, color: "#96CEB4" },
+  { name: "Communication and collaboration", icon: UsersThree, color: "#FFEEAD" },
 ];
 
-function MicrobiologySkills() {
+function Skills() {
   const containerRef = useRef(null);
   const trackRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -117,4 +107,4 @@ function MicrobiologySkills() {
   );
 }
 
-export default MicrobiologySkills;
+export default Skills;

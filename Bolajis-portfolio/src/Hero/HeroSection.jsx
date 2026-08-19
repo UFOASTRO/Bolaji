@@ -1,63 +1,14 @@
-import { useEffect, useRef, useState } from "react";
+
 import Bolaji from "../assets/Images/Bolaji.png";
 import jaggedyLine from "../assets/jaggedy-line.svg";
 import upDownArrow from "../assets/up-down-arrow.svg";
-import { Dithering } from '@paper-design/shaders-react';
+
 import "./Hero.css";
 
 function HeroSection() {
-  const cursorRef = useRef(null);
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-
-  useEffect(() => {
-    setDimensions({ width: window.innerWidth, height: window.innerHeight });
-
-    const handleResize = () => {
-      setDimensions({ width: window.innerWidth, height: window.innerHeight });
-    };
-
-    const handleMouseMove = (e) => {
-      if (cursorRef.current) {
-        const x = e.clientX;
-        const y = e.clientY;
-        const mask = `radial-gradient(circle 200px at ${x}px ${y}px, black 0%, transparent 100%)`;
-        cursorRef.current.style.WebkitMaskImage = mask;
-        cursorRef.current.style.maskImage = mask;
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-
   return (
     <>
-      {/* Global Mouse Hover Effect using Dithering */}
-      <div
-        ref={cursorRef}
-        className="fixed inset-0 z-50 pointer-events-none mix-blend-screen opacity-80"
-        style={{
-          WebkitMaskImage: `radial-gradient(circle 0px at 0px 0px, black 0%, transparent 100%)`,
-          maskImage: `radial-gradient(circle 0px at 0px 0px, black 0%, transparent 100%)`,
-        }}
-      >
-        {dimensions.width > 0 && (
-          <Dithering
-            width={dimensions.width}
-            height={dimensions.height}
-            colorBack="#000000"
-            colorFront="#ffde0a"
-            shape="warp"
-            type="4x4"
-            size={2.5}
-            speed={1}
-          />
-        )}
-      </div>
+
 
       <section id="home" className="hero-section relative w-full overflow-hidden md:mb-30 ">
         <div className="container mx-auto flex flex-col md:block min-h-[80vh] md:min-h-screen relative">
@@ -120,6 +71,7 @@ function HeroSection() {
                       <span className="h-[1.25em] flex items-center whitespace-nowrap">model</span>
                       <span className="h-[1.25em] flex items-center whitespace-nowrap">researcher</span>
                       <span className="h-[1.25em] flex items-center whitespace-nowrap">fashionista</span>
+                      <span className="h-[1.25em] flex items-center whitespace-nowrap">editorial reviewer</span>
                       <span className="h-[1.25em] flex items-center whitespace-nowrap">writer</span>
                     </div>
                   </div>

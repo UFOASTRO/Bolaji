@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "skills": {
+    "antislop-code": {
+      "source": "miqdadbadjuber/anti-slop",
+      "sourceType": "github",
+      "skillPath": "skills/antislop-code/SKILL.md",
+      "computedHash": "3234a47a3a217c6a8aca3f53c024adeb372afff28dbff3ef7c2f5e05fa0dc566"
+    },
+    "antislop-human": {
+      "source": "miqdadbadjuber/anti-slop",
+      "sourceType": "github",
+      "skillPath": "skills/antislop-human/SKILL.md",
+      "computedHash": "84c70fa7ccf48eb3a9bdefaf497e4f321ab7082b3418fdc689591aeaf745951e"
+    },
+    "antislop-ui": {
+      "source": "miqdadbadjuber/anti-slop",
+      "sourceType": "github",
+      "skillPath": "skills/antislop-ui/SKILL.md",
+      "computedHash": "f3bf2a91034f4faf9936baabf894c7c0300e678c49102be98580925acadaaed0"
+    }
+  }
+}
