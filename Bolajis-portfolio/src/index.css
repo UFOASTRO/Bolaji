@@ -5,6 +5,10 @@
   background-color: red; /* Color of the highlight when selected */
   color: white; /* Color of the text when selected */
 }
+
+html {
+  scroll-behavior: smooth;
+}
 :root{
     --default-yellow : #FFD52F;
     --background-color : #FFFDF1;

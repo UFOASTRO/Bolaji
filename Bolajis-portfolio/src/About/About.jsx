@@ -31,7 +31,7 @@ function AboutBolaji() {
   );
 
   return (
-    <section className="w-full flex items-center justify-center">
+    <section id="about" className="w-full flex items-center justify-center">
       {" "}
       {/* Added background color context */}
       <div className="container flex flex-col md:flex-row justify-between items-center p-6 md:p-8 gap-10 md:gap-10">

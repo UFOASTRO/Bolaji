@@ -6,7 +6,7 @@ import { EnvelopeSimple, Phone } from "@phosphor-icons/react";
 
 function Contact() {
   return (
-    <section className="w-full flex items-center justify-center bg-[#FEF4B4] py-16 md:py-24">
+    <section id="contact" className="w-full flex items-center justify-center bg-[#FEF4B4] py-16 md:py-24">
       <div className="container px-6 md:px-8 max-w-7xl flex flex-col md:flex-row gap-16 md:gap-8 justify-between">
         
         {/* Left Side: Info */}

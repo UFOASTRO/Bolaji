@@ -44,7 +44,7 @@ function Newsletters() {
   }, { scope: tapeRef });
 
   return (
-    <section className="w-full flex flex-col items-center justify-center my-10 md:my-20 overflow-hidden">
+    <section id="newsletters" className="w-full flex flex-col items-center justify-center my-10 md:my-20 overflow-hidden">
       
       {/* Animated Tapes (Crossing) */}
       <div ref={tapeRef} className="relative w-full h-48 md:h-72 mt-10 mb-16 md:mb-24 flex items-center justify-center overflow-hidden">
