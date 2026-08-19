@@ -1,5 +1,5 @@
-.hero-section{
-     font-family: "Lexend", sans-serif;
+.hero-section {
+  font-family: "Lexend", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -8,4 +8,17 @@
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+}
+
+.animate-slot-machine {
+  animation: spinWords 10s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+}
+
+@keyframes spinWords {
+  0%, 15% { transform: translateY(0); }
+  20%, 35% { transform: translateY(-16.666%); }
+  40%, 55% { transform: translateY(-33.333%); }
+  60%, 75% { transform: translateY(-50%); }
+  80%, 95% { transform: translateY(-66.666%); }
+  100% { transform: translateY(-83.333%); }
 }

@@ -1,6 +1,7 @@
 import './App.css';
 import NavBar from '../components/Navbar';
 import HeroSection from './Hero/HeroSection';
+import MicrobiologySkills from './Skills/MicrobiologySkills';
 import AboutBolaji from './About/About';
 import Newsletters from './Newsletters/Newsletters';
 import Projects from './Projects/Projects';
@@ -15,6 +16,7 @@ function App() {
       <div className="conatianer bg-(--background-color)">
         <NavBar />
         <HeroSection />
+        <MicrobiologySkills />
         <AboutBolaji />
         <Newsletters />
         <Projects />

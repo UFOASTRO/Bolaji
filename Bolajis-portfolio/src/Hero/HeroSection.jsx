@@ -30,34 +30,52 @@ function HeroSection() {
           </div>
         </div>
 
-        {/* IMAGE CONTENT */}
-        {/* On Mobile: Order 2. Customized Border Radius. */}
-        <div className="order-2 relative mt-6 md:mt-0 flex justify-center md:block">
-          {/* Desktop: Your original padding/layout. Mobile: Full width with custom rounded corners */}
-          <img
-            src={Bolaji}
-            alt="Bolaji"
-            className="w-full h-auto object-cover 
-                       md:py-10 md:px-10 md:w-auto md:relative
-                       rounded-tr-[4rem] rounded-bl-[4rem] md:rounded-none"
-          />
-        </div>
-
-        {/* BADGE (A WRITER) */}
-        {/* On Mobile: Absolute bottom-right of the image container. Desktop: Your original absolute position */}
-        <div className="absolute bottom-[40%] right-10 
-                        md:bottom-25 md:right-20 
-                        md:bg-transparent
-                        text-3xl md:text-[4rem] font-bold 
-                        border-[#191919] px-6 py-2 md:px-18 md:py-2 
-                        border rounded-xl shadow-lg md:shadow-none z-20">
-          <div className="items relative flex items-center gap-2">
-            <p>A writer</p>
+        {/* IMAGE & BADGE CONTENT */}
+        <div className="order-2 relative mt-6 md:mt-0 flex justify-center md:justify-end md:w-full md:pr-10 md:pt-10 z-20">
+          
+          <div className="relative inline-block w-full max-w-[90%] md:max-w-none md:w-auto">
+            {/* The Image */}
             <img
-              src={upDownArrow}
-              alt=""
-              className="w-6 md:w-auto md:absolute md:-right-14 md:top-4"
+              src={Bolaji}
+              alt="Bolaji"
+              className="w-full h-auto object-cover 
+                         rounded-tl-[3rem] rounded-tr-[3rem] rounded-bl-[3rem] 
+                         md:rounded-tl-[4rem] md:rounded-tr-[4rem] md:rounded-bl-[4rem]
+                         rounded-br-none"
             />
+
+            {/* CUTOUT & BADGE WRAPPER */}
+            <div className="absolute bottom-0 right-0 bg-[#FFFDF1] pt-4 pl-4 md:pt-6 md:pl-6 rounded-tl-[1.5rem] md:rounded-tl-[2.5rem]">
+              
+              {/* Inverse Corner Top */}
+              <div className="absolute -top-6 right-0 md:-top-10 w-6 h-6 md:w-10 md:h-10 bg-transparent rounded-br-[1.5rem] md:rounded-br-[2.5rem] shadow-[15px_15px_0_15px_#FFFDF1]"></div>
+              
+              {/* Inverse Corner Left */}
+              <div className="absolute bottom-0 -left-6 md:-left-10 w-6 h-6 md:w-10 md:h-10 bg-transparent rounded-br-[1.5rem] md:rounded-br-[2.5rem] shadow-[15px_15px_0_15px_#FFFDF1]"></div>
+              
+              {/* Actual Badge */}
+              <div className="relative text-2xl sm:text-3xl md:text-[3.5rem] font-bold 
+                              border-[#191919] px-4 py-2 sm:px-6 sm:py-3 md:px-10 md:py-4 
+                              border rounded-xl md:rounded-2xl z-20 bg-[#FFFDF1]
+                              flex items-center gap-2 md:gap-4">
+                <span className="mr-1">A</span>
+                <div className="h-[1.25em] overflow-hidden relative">
+                  <div className="flex flex-col animate-slot-machine text-left">
+                    <span className="h-[1.25em] flex items-center whitespace-nowrap">writer</span>
+                    <span className="h-[1.25em] flex items-center whitespace-nowrap">microbiologist</span>
+                    <span className="h-[1.25em] flex items-center whitespace-nowrap">model</span>
+                    <span className="h-[1.25em] flex items-center whitespace-nowrap">researcher</span>
+                    <span className="h-[1.25em] flex items-center whitespace-nowrap">fashionista</span>
+                    <span className="h-[1.25em] flex items-center whitespace-nowrap">writer</span>
+                  </div>
+                </div>
+                <img
+                  src={upDownArrow}
+                  alt="arrows"
+                  className="w-4 sm:w-5 md:w-6 ml-1 md:ml-2"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
